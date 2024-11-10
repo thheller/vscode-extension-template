@@ -18,6 +18,10 @@ node_modules
 .cache
 **/.calva/output-window/output.calva-repl
 
+# Cursive/IDEA
+.idea/
+*.iml
+
 # Extension
 /out/
 

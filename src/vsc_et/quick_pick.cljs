@@ -10,8 +10,8 @@
    using the `save-as` key."
   [items quickpick-options save-as]
   (let [qp ^js (vscode/window.createQuickPick)
-        context ^js (:extension/context @db/!app-db)
-        ws-state ^js (.-workspaceState context)
+        context (db/get-vscode-context!)
+        ws-state (.-workspaceState context)
         saved-label (.get ws-state save-as)
         saved-items (.filter items (fn [^js item]
                                      (= saved-label (.-label item))))]

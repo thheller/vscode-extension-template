@@ -31,5 +31,5 @@
           text))))
 
 (defn extension-path [app-db]
-  (-> ^js (:extension/context app-db)
+  (-> (db/get-vscode-context!)
       (.-extensionPath)))
