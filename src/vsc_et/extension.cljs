@@ -1,5 +1,7 @@
 (ns vsc-et.extension
-  (:require [vsc-et.extension.db :as db]))
+  (:require
+    [vsc-et.extension.db :as db]
+    [vsc-et.extension.commands]))
 
 ;;;;; Extension activation entry point
 
